@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="css/tab.css">
 <link rel="stylesheet" href="css/scroll.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="js/tab.js" ></script>
 
 <style>
@@ -101,14 +102,13 @@ body {
       <div class="header">
         <h1>Dr. Redwan Newaz</h1>
     </div>
-
-
-      <div class="tab">
-        <button class="tablinks" onclick="openTab(event, 'experience')">Experience</button>
-        <button class="tablinks" onclick="openTab(event, 'education')">Education</button>
-        <button class="tablinks" onclick="openTab(event, 'publication')">Publication</button>
-        <button class="tablinks" onclick="openTab(event, 'demo')">Demo</button>
-      </div>
+<!--<a href="#section2">Demo</a>-->
+     <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'experience')"> <a style="text-decoration:none" href="#section2">Experience</a> </button>
+        <button class="tablinks" onclick="openTab(event, 'education')"><a style="text-decoration:none" href="#section2">Education</a></button>
+        <button class="tablinks" onclick="openTab(event, 'publication')"><a style="text-decoration:none" href="#section2">Publication</a></button>
+        <button class="tablinks" onclick="openTab(event, 'demo')"><a style="text-decoration:none" href="#section2">Demo</a></button>
+     </div>
 
 
 <!--      Bio-->
@@ -141,8 +141,9 @@ body {
       </div>
 
 <!--      Experience-->
+      <div class="main" id="section2">
       <div id="experience" class="tabcontent">
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
+      <div class="w3-container w3-card w3-white w3-margin-bottom" >
         <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
         <div class="w3-container">
 
@@ -202,6 +203,7 @@ body {
         </div>
       </div>
       </div>
+
 <!--  End of experience -->
 
 
@@ -271,6 +273,8 @@ body {
       </div>
 
        </div>
+<!--        End scroll-->
+         </div>
     <!-- End Right Column -->
     </div>
 

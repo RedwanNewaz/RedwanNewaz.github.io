@@ -61,3 +61,12 @@ ol.news {
   border: 1px solid #ccc;
   border-top: none;
 }
+
+/*scrolling behavior*/
+html {
+  scroll-behavior: smooth;
+}
+
+#section2 {
+  height: 600px;
+}

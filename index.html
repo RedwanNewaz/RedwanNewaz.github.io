@@ -100,12 +100,13 @@ body {
 
       <!--      Header -->
       <div class="header">
-        <h1>Dr. Redwan Newaz</h1>
+        <h1>Abdullah Al Redwan Newaz</h1>
     </div>
 <!--<a href="#section2">Demo</a>-->
      <div class="tab">
         <button class="tablinks" onclick="openTab(event, 'experience')"> <a style="text-decoration:none" href="#section2">Experience</a> </button>
         <button class="tablinks" onclick="openTab(event, 'education')"><a style="text-decoration:none" href="#section2">Education</a></button>
+        <button class="tablinks" onclick="openTab(event, 'research')"><a style="text-decoration:none" href="#section2">Research</a></button>
         <button class="tablinks" onclick="openTab(event, 'publication')"><a style="text-decoration:none" href="#section2">Publication</a></button>
         <button class="tablinks" onclick="openTab(event, 'demo')"><a style="text-decoration:none" href="#section2">Demo</a></button>
      </div>
@@ -133,6 +134,7 @@ body {
           <div class="w3-container">
             <script src="js/blink.js" type="text/javascript"></script>
              <ol class="news"></li>
+              <li>On September 29, 2021, two of my papers got accepted in IEEE International Conference on Robotic Computing (IRC)</li>
               <li>On July 26, 2021, my paper got accepted in IEEE  Systems, Man, and Cybernetics (SMC)</li>
               <li>On June 10, 2021, my paper got accepted in IEEE International Symposium on Robot and Human Interactive Communication (RO-MAN)</li>
               <li>On May 29, 2021, my paper got accepted in IEEE Robotics and Automation Letters with IROS 2021 option</li>
@@ -233,12 +235,412 @@ body {
       </div>
     </div>
 <!--      End of education-->
+
+<!--      Research -->
+<div id="research" class="tabcontent">
+  <div class="w3-container w3-card w3-white">
+    <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Research</h2>
+    <div class="w3-container">
+      <p>My research interests lie in the areas of Artificial Intelligence, Robotics,  Machine Learning, Deep Learning, and Cyber-Physical Systems.
+      My research balances both theory and practical implementations, with an emphasis on developing elegant, scalable, theoretically sound algorithms for solving 
+      real-world robotics applications.
+      Below is a breakdown of my doctoral and postdoctoral research experiences.</p>
+      <hr>
+    </div>
+    <div class="w3-container">
+      <h2>Environmental Monitoring using Unmanned Systems</h2>
+      <p>My doctoral research was focused on developing unmanned autonomous robotic systems that can contribute greatly to search-and-rescue missions, 
+      and can also be used for environmental monitoring purposes. 
+      <img src="img/uavs.png" align = "right"  width="250" height="250"/>
+      My doctoral dissertation was a study of <b>UAV-based Topographic Mapping and Source Localization of the Radiation Field</b>. 
+      This dissertation seeks to address methodological shortcomings in the current empirical research on source localization of the radiation field.
+      In the radiation field monitoring problem, measurements of the field are spatially distributed throughout the target area. 
+      Given a target area, estimating the source positions is what is commonly known as a source localization problem. 
+      One of the straightforward approaches is to find the location where the measurement is significantly higher than the others. 
+      However, in the radiation field, if the cumulative radiating effect of sources exists, the field turns out to be complex to estimate, 
+      and the sources are no longer at the center of each distribution. Accordingly, the hotspot, where the radiation intensity is maximum, 
+      does not coincide with the positions of sources. From the robot's point of view, the measurement is one pixel and must gather at the expense of exploration. 
+      When the environment is unknown, the robot needs to measure the field by exploring which location is interesting and which is not. 
+      Robots operating under such conditions have to tackle the problem of deciding where to go to get the most relevant information.
+      Therefore, we propose an efficient exploration method to quickly localize the radiation sources using the following procedures: 
+      1) Region of Interest (ROI) determination utilizing topographic maps with specific radiation level selection methods and 
+      2) source localization estimating the number of sources and their positions with Variational Bayes inference of Gaussian mixtures 
+      For real-world implementation, we developed autonomous vision-based UAV navigation for a GPS-denied environment.</p>
+
+      <h2>Planning under Uncertainties for Safety-critical Systems</h2>
+      <p>In classical behavior planning algorithms assume that all the elements of an environment are known to compute the solution 
+        before ever actually executing an action in the environment. Unfortunately, uncertainty is an unavoidable part of any autonomous system that precludes agents 
+        from being able to plan a solution in advance.  
+        <img src="img/fetch.png" align = "right"  width="300" height="250"/>
+        To deal with uncertainties, part of my research activities aimed at leveraging 
+        <b>interactive learning and data-driven prediction</b> to synthesize optimal policies with cost and energy constraints in 
+        dynamic environments. Autonomous robots operating in uncertain domains often 
+        face tasks with both Boolean qualitative requirements (such as reaching a goal location safely) and optimality criteria (such as reaching 
+        the goal as fast as possible). These problems can be modeled as Partially Observable Markov Decision Processes (POMDPs) with quantitative 
+        and qualitative objectives. 
+        In this work, we study this problem for the special case
+        of <i>safe-reachability</i> objectives, which require that with a
+        probability above a threshold, a goal state is eventually reached
+        while keeping the probability of visiting unsafe states below a
+        different threshold. We present an online scalable policy synthesis framework for POMDPs with safe-reachability objectives.
+        We also offer a theoretical analysis of this framework and evaluate our framework through real-robot experiments.      
+      </p>
+
+      <h2>Vision-based Perception Systems for Autonomous Cars</h2>
+      <p>
+        The advent of autonomous driving technologies would lead to vehicles with different levels of autonomy equipped with 
+        Advanced Driver Assistance Systems (ADAS), in which automatically identifying pedestrians will be a crucial safety requirement. 
+        <img src="img/pedestrian.png" align = "right"  width="250" height="250"/>
+        An important extension of my research is to develop an efficient and robust <b>deep learning-based perception system</b> that facilitates 
+        the vision-based planning modules. In particular, my research focuses on real-time accurate 
+        pedestrian detection and tracking to ensure safety and reliability in autonomous driving.
+        Pedestrian detection is a notoriously hard problem and particularly challenging due to the fact that pedestrians may appear in various poses, 
+        clothing, and articulations of body parts. Likewise, pedestrians can be found mostly in urban areas where the background texture form a highly cluttered environment.
+        We investigate multi-modal sensor data, joint evaluation of inferences from anchor box and semantic segmentation networks, and body parts to detect and 
+        track pedestrians accurately and robustly. 
+        In addition to the pedestrian detection problem,  I also worked on modeling driving behavior using deep 
+        learning algorithms when I was a Post-Doctoral Researcher at Nagoya University. My specific interest was in the Generative Adversarial Networks (GANs) 
+        which is a semi-supervised machine learning algorithm. Specifically, I was focusing on developing the ability of self-driving or autonomous cars to detect 
+        anomalous driving behavior with generative adversarial networks (GANs)
+      </p>
+
+      <h2>Efficient Tasking and Coordination for Multi-Agent Systems</h2>
+      <p>In many scenarios, it is important to deploy a team of mobile robots as a sensing platform to accomplish complex missions such as smart farming, environmental monitoring, 
+      etc. <img src="img/multi-agent.png" align = "right"  width="250" height="250"/> 
+      Monitoring, surveying, or search-and-rescuing using the multi-robot system, however, can be a technical challenge because this problem demands an efficient tasking 
+      and coordination mechanism. My research activities in multi-agent systems focus on developing an <b>integrated task and coordination</b> mechanism to monitor an area of 
+      interest while incorporating the physical and sensing constraints of heterogeneous robots as well as satisfying measurement quality requirements.
+      My current research at NCAT primarily focuses on <b>Multi-agent System applications and enabling capabilities</b>. 
+      In particular, we are interested in monitoring environmental phenomena, such as nuclear radiation, greenhouse gas emission, soil parameters in precision agriculture, 
+      traffic incidents. These phenomena are generally referred to as spatiotemporal fields which have high variability in both time and space.  Unlike a single robot system,  
+      a multi-robot system presents an efficient, faster solution to the problem of understanding unknown spatiotemporal fields.
+      Besides surveillance and monitoring, we also investigate safety and reachability requirements in dynamic adversarial environments when little or no information about 
+      the dynamics and intentions of the adversarial objects is available. </p>
+
+    </div>
+    <div class="w3-container">
+ 
+    </div>
+  </div>
+</div>
+<!--      End of Research-->
       <div id="publication" class="tabcontent">
         <div class="w3-container w3-card w3-white">
         <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Publication</h2>
         <div class="w3-container">
+<!-- =============================================== JOURNALS ================================================================= -->
+          <h2> Journal Articles</h2>
+          <table>
 
-          <p>Under construction. Please look at my CV.</p>
+            <tr valign="top">
+            <td align="right" class="bibtexnumber">
+            [<a name="redwan2021RAL">1</a>]
+            </td>
+            <td class="bibtexitem">
+            <b>Abdullah Al Redwan</b>&nbsp;<b>Newaz</b>, Tauhidul Alam, Murad&nbsp;Reis Gregory,
+              Leonardo Bobadilla, and Ryan&nbsp;N Smith.
+             Long-term autonomy for AUVs operating under uncertainties in
+              dynamic marine environments.
+             <em>IEEE Robotics and Automation Letters</em>, 6(4):6313 -- 6320, 2021.
+            [&nbsp;<a href="Journals_bib.html#redwan2021RAL">bib</a>&nbsp;]
+            
+            </td>
+            </tr>
+            
+            
+            <tr valign="top">
+            <td align="right" class="bibtexnumber">
+            [<a name="laya2021tac">2</a>]
+            </td>
+            <td class="bibtexitem">
+            Laya Shamgah, Tadewos&nbsp;G. Tadewos, <b>Abdullah Al Redwan</b>&nbsp;<b>Newaz</b>, Ali
+              Karimoddini, and Albert C.&nbsp;Esterline.
+             Reactive symbolic planning and control in dynamic adversarial
+              environments.
+             <em>IEEE Transactions on Automatic Control</em>, 2021.
+            [&nbsp;<a href="Journals_bib.html#laya2021tac">bib</a>&nbsp;]
+            
+            </td>
+            </tr>
+            
+            
+            <tr valign="top">
+            <td align="right" class="bibtexnumber">
+            [<a name="wang2021online">3</a>]
+            </td>
+            <td class="bibtexitem">
+            Yue Wang, <b>Abdullah Al Redwan</b>&nbsp;<b>Newaz</b>, Juan&nbsp;David Hern&aacute;ndez,
+              Swarat Chaudhuri, and Lydia&nbsp;E Kavraki.
+             Online partial conditional plan synthesis for POMDPs with
+              safe-reachability objectives: Methods and experiments.
+             <em>IEEE Transactions on Automation Science and Engineering</em>,
+              18(3):932 -- 945, 2021.
+             (Equally contributed).
+            [&nbsp;<a href="Journals_bib.html#wang2021online">bib</a>&nbsp;]
+            
+            </td>
+            </tr>
+            
+            
+            <tr valign="top">
+            <td align="right" class="bibtexnumber">
+            [<a name="alam2021towards">4</a>]
+            </td>
+            <td class="bibtexitem">
+            Tauhidul Alam, <b>Abdullah</b>&nbsp;<b>Al Redwan Newaz</b>, Leonardo Bobadilla,
+              Wesam&nbsp;H Alsabban, Ryan&nbsp;N Smith, and Ali Karimoddini.
+             Towards energy-aware feedback planning for long-range autonomous
+              underwater vehicles.
+             <em>Frontiers in Robotics and AI</em>, 8:7, 2021.
+             (Equally contributed).
+            [&nbsp;<a href="Journals_bib.html#alam2021towards">bib</a>&nbsp;]
+            
+            </td>
+            </tr>
+            
+            
+            <tr valign="top">
+            <td align="right" class="bibtexnumber">
+            [<a name="nantawat2019rapid">5</a>]
+            </td>
+            <td class="bibtexitem">
+            Nantawat Pinkam, <b>Abdullah Al Redwan</b>&nbsp;<b>Newaz</b>, Sungmoon Jeong, and
+              Nak&nbsp;Young Chong.
+             Rapid coverage of regions of interest for environmental monitoring.
+             <em>Intelligent Service Robotics</em>, 12(4):393--406, 2019.
+            [&nbsp;<a href="Journals_bib.html#nantawat2019rapid">bib</a>&nbsp;]
+            
+            </td>
+            </tr>
+            
+            
+            <tr valign="top">
+            <td align="right" class="bibtexnumber">
+            [<a name="newaz2018online">6</a>]
+            </td>
+            <td class="bibtexitem">
+            <b>Abdullah Al Redwan</b>&nbsp;<b>Newaz</b>, Sungmoon Jeong, and Nak&nbsp;Young Chong.
+             Online boundary estimation in partially observable environments using
+              a UAV.
+             <em>Journal of Intelligent and Robotic Systems</em>, 90(3):505--514,
+              2018.
+            [&nbsp;<a href="Journals_bib.html#newaz2018online">bib</a>&nbsp;]
+            
+            </td>
+            </tr>
+            
+            
+            <tr valign="top">
+            <td align="right" class="bibtexnumber">
+            [<a name="newaz2016uav">7</a>]
+            </td>
+            <td class="bibtexitem">
+            <b>Abdullah Al Redwan</b>&nbsp;<b>Newaz</b>, Sungmoon Jeong, Hosun Lee, Hyejeong Ryu,
+              and Nak&nbsp;Young Chong.
+             UAV-based multiple source localization and contour mapping of
+              radiation fields.
+             <em>Robotics and Autonomous Systems</em>, 85:12--25, 2016.
+            [&nbsp;<a href="Journals_bib.html#newaz2016uav">bib</a>&nbsp;]
+            
+            </td>
+            </tr>
+            </table>
+          <!-- =============================================== CONFERENCE ================================================================= -->
+          <h2>Conference Papers</h2>
+          <table>
+
+            <tr valign="top">
+            <td align="right" class="bibtexnumber">
+            [<a name="redwan2021ROMAN">1</a>]
+            </td>
+            <td class="bibtexitem">
+            <b>Abdullah Al Redwan</b>&nbsp;<b>Newaz</b>, Tauhidul Alam, Joseph Mondello, Jonathan
+              Johnson, and Leonardo Bobadilla.
+             Multi-robot information gathering subject to resource constraints.
+             <em>IEEE International Conference on Robot and Human Interactive
+              Communication</em>, pages 1--6, 2021.
+            [&nbsp;<a href="conferences_bib.html#redwan2021ROMAN">bib</a>&nbsp;]
+            
+            </td>
+            </tr>
+            
+            
+            <tr valign="top">
+            <td align="right" class="bibtexnumber">
+            [<a name="islam2021Tracking">2</a>]
+            </td>
+            <td class="bibtexitem">
+            Muhammad&nbsp;Mobaidul Islam, <b>Abdullah Al Redwan</b>&nbsp;<b>Newaz</b>, and Ali
+              Karimoddini.
+             A pedestrian detection and tracking framework for autonomous cars:
+              Efficient fusion of camera and LiDAR data.
+             In <em>IEEE International Conference on Systems, Man, and
+              Cybernetics</em>, 2021.
+            [&nbsp;<a href="conferences_bib.html#islam2021Tracking">bib</a>&nbsp;]
+            
+            </td>
+            </tr>
+            
+            
+            <tr valign="top">
+            <td align="right" class="bibtexnumber">
+            [<a name="islam2021IRC">3</a>]
+            </td>
+            <td class="bibtexitem">
+            Muhammad&nbsp;Mobaidul Islam, <b>Abdullah Al Redwan</b>&nbsp;<b>Newaz</b>, Renran Tian,
+              Abdollah Homaifar, and Ali Karimoddini.
+             A computationally effective pedestrian detection using constrained
+              fusion with body parts for autonomous driving.
+             In <em>IEEE International Conference on Robotic Computing</em>, 2021.
+            [&nbsp;<a href="conferences_bib.html#islam2021IRC">bib</a>&nbsp;]
+            
+            </td>
+            </tr>
+            
+            
+            <tr valign="top">
+            <td align="right" class="bibtexnumber">
+            [<a name="newaz2021Hierarchical">4</a>]
+            </td>
+            <td class="bibtexitem">
+            <b>Abdullah Al Redwan</b>&nbsp;<b>Newaz</b> and Tauhidul Alam.
+             Hierarchical task and motion planning through deep reinforcement
+              learning.
+             In <em>IEEE International Conference on Robotic Computing</em>, 2021.
+            [&nbsp;<a href="conferences_bib.html#newaz2021Hierarchical">bib</a>&nbsp;]
+            
+            </td>
+            </tr>
+            
+            
+            <tr valign="top">
+            <td align="right" class="bibtexnumber">
+            [<a name="islam2020pedestrian">5</a>]
+            </td>
+            <td class="bibtexitem">
+            Muhammad&nbsp;Mobaidul Islam, <b>Abdullah Al Redwan</b>&nbsp;<b>Newaz</b>, Balakrishna
+              Gokaraju, and Ali Karimoddini.
+             Pedestrian detection for autonomous cars: Occlusion handling by
+              classifying body parts.
+             In <em>IEEE International Conference on Systems, Man, and
+              Cybernetics</em>, pages 1433--1438, 2020.
+            [&nbsp;<a href="conferences_bib.html#islam2020pedestrian">bib</a>&nbsp;]
+            
+            </td>
+            </tr>
+            
+            
+            <tr valign="top">
+            <td align="right" class="bibtexnumber">
+            [<a name="newaz2019monte">6</a>]
+            </td>
+            <td class="bibtexitem">
+            <b>Abdullah Al Redwan</b>&nbsp;<b>Newaz</b>, Swarat Chaudhuri, and Lydia&nbsp;E Kavraki.
+             Monte-Carlo policy synthesis in POMDPs with quantitative and
+              qualitative objectives.
+             <em>Robotics: Science and Systems</em>, 2019.
+            [&nbsp;<a href="conferences_bib.html#newaz2019monte">bib</a>&nbsp;]
+            
+            </td>
+            </tr>
+            
+            
+            <tr valign="top">
+            <td align="right" class="bibtexnumber">
+            [<a name="newaz2016fast">7</a>]
+            </td>
+            <td class="bibtexitem">
+            <b>Abdullah Al Redwan</b>&nbsp;<b>Newaz</b>, Sungmoon Jeong, Hosun Lee, Hyejeong Ryu,
+              Nak&nbsp;Young Chong, and Matthew&nbsp;T Mason.
+             Fast radiation mapping and multiple source localization using
+              topographic contour map and incremental density estimation.
+             In <em>IEEE International Conference on Robotics and Automation</em>,
+              pages 1515--1521, 2016.
+            [&nbsp;<a href="conferences_bib.html#newaz2016fast">bib</a>&nbsp;]
+            
+            </td>
+            </tr>
+            
+            
+            <tr valign="top">
+            <td align="right" class="bibtexnumber">
+            [<a name="newaz2016hotspot">8</a>]
+            </td>
+            <td class="bibtexitem">
+            <b>Abdullah Al Redwan</b>&nbsp;<b>Newaz</b>, Sungmoon Jeong, and Nak&nbsp;Young Chong.
+             Fast radioactive hotspot localization using a UAV.
+             In <em>IEEE International Conference on Simulation, Modeling, and
+              Programming for Autonomous Robots</em>, pages 9--15, 2016.
+            [&nbsp;<a href="conferences_bib.html#newaz2016hotspot">bib</a>&nbsp;]
+            
+            </td>
+            </tr>
+            
+            
+            <tr valign="top">
+            <td align="right" class="bibtexnumber">
+            [<a name="newaz2013exploration">9</a>]
+            </td>
+            <td class="bibtexitem">
+            <b>Abdullah Al Redwan</b>&nbsp;<b>Newaz</b>, Ferdian&nbsp;Adi Pratama, and Nak&nbsp;Young Chong.
+             Exploration priority based heuristic approach to UAV path planning.
+             In <em>IEEE International Symposium on Robot and Human Interactive
+              Communication</em>, pages 521--526, 2013.
+            [&nbsp;<a href="conferences_bib.html#newaz2013exploration">bib</a>&nbsp;]
+            
+            </td>
+            </tr>
+            
+            
+            <tr valign="top">
+            <td align="right" class="bibtexnumber">
+            [<a name="newaz20133d">10</a>]
+            </td>
+            <td class="bibtexitem">
+            <b>Abdullah Al Redwan</b>&nbsp;<b>Newaz</b>, Geunho Lee, Ferdian&nbsp;Adi Pratama, and
+              Nak&nbsp;Young Chong.
+             3D exploration priority based flocking of UAVs.
+             In <em>IEEE International Conference on Mechatronics and
+              Automation</em>, pages 1534--1539, 2013.
+            [&nbsp;<a href="conferences_bib.html#newaz20133d">bib</a>&nbsp;]
+            
+            </td>
+            </tr>
+            </table>
+<!-- =============================================== Under Review ================================================================= -->
+            <h2>Under Review Journal Articles</h2>
+            <table>
+
+              <tr valign="top">
+              <td align="right" class="bibtexnumber">
+              [<a name="Tadewos2021BT">1</a>]
+              </td>
+              <td class="bibtexitem">
+              Tadewos&nbsp;G. Tadewos, <b>Abdullah Al Redwan</b>&nbsp;<b>Newaz</b>, and Ali Karimoddini.
+               Specification-guided behavior tree synthesis and execution.
+               <em>Journal of The Franklin Institute</em>, 2021.
+              [&nbsp;<a href="underReview_bib.html#Tadewos2021BT">bib</a>&nbsp;]
+              
+              </td>
+              </tr>
+              
+              
+              <tr valign="top">
+              <td align="right" class="bibtexnumber">
+              [<a name="islam2021semantic">2</a>]
+              </td>
+              <td class="bibtexitem">
+              Muhammad&nbsp;Mobaidul Islam, <b>Abdullah Al Redwan</b>&nbsp;<b>Newaz</b>, and Ali
+                Karimoddini.
+               Pedestrian detection for autonomous cars: Inference fusion of deep
+                neural networks.
+               In <em>Transactions on Intelligent Transportation Systems</em>, 2021.
+              [&nbsp;<a href="underReview_bib.html#islam2021semantic">bib</a>&nbsp;]
+              
+              </td>
+              </tr>
+              </table>
+              <!-- =============================================== End ================================================================= -->
         </div>
         </div>
       </div>
@@ -267,7 +669,7 @@ body {
           </div>
           <p><b> Deep Reinforcement Learning </b></p>
           <div class="scrollmenu">
-          <iframe width="460" height="215" src="https://www.youtube.com/embed/TVOIFx5RJ94" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="460" height="215" src="https://www.youtube.com/embed/rHX4-86TrX8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
          <iframe width="460" height="215" src="https://www.youtube.com/embed/REwLlblZpBk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
             <p><b> Long-term Autonomy in Marine Robotics </b></p>
@@ -277,7 +679,7 @@ body {
             </div>
 <p>         <p><b> Deep Learning-based Pedestrian Detection and Tracking </b></p>
             <div class="scrollmenu">
-                <iframe width="460" height="215" src="https://www.youtube.com/embed/F-IofhckYoc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="460" height="215" src="https://www.youtube.com/embed/bXWyC0TpOSM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <iframe width="460" height="215" src="https://www.youtube.com/embed/pICNUo1Of7k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
           </br>

@@ -1,0 +1,237 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Redwan Newaz</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<span class="image avatar48"><img src="images/redwan_crop.jpg" alt="" /></span>
+							<h1 id="title">Redwan Newaz</h1>
+							<p>Roboticist</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="index.html" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
+								<li><a href="#uavs" id="uavs-link"><span class="icon solid fa-thermometer-quarter">Environmental Monitoring</span></a></li>
+                                <li><a href="#fetch" id="fetch-link"><span class="icon solid fa-snowflake">Plan under Uncertainties</span></a></li>
+                                <li><a href="#pedestrian" id="pedestrian-link"><span class="icon solid fa-car">Vision-based Perception</span></a></li>
+                                <li><a href="#multi-agent" id="multi-agent-link"><span class="icon solid fa-users">Multi-Agent Systems</span></a></li>
+
+							</ul>
+						</nav>
+
+				</div>
+
+				
+				<div class="bottom">
+					<ul class="icons">
+						<li><a href="https://scholar.google.com/citations?user=L_ctqf0AAAAJ&hl=en" class="icon solid fa-graduation-cap"><span class="label">Twitter</span></a></li>
+						<li><a href="https://www.accesslab.net/people/redwan-newaz" class="icon solid fa-briefcase"><span class="label">Facebook</span></a></li>
+						<li><a href="https://github.com/RedwanNewaz" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="https://www.linkedin.com/in/abdullah-al-redwan-newaz-5ba849130/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="mailto://redwan06me@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+				</div>
+
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+					<section id="zero" class="two">
+						<header>
+							<h2>Research Portfolio</h2>
+						</header>
+				
+						<p>My research interests lie in the areas of Artificial Intelligence, Robotics, 
+							Machine Learning, Deep Learning, and Cyber-Physical Systems. 
+							My research balances both theory and practical implementations, 
+							with an emphasis on developing elegant, scalable, theoretically sound algorithms 
+							for solving real-world robotics applications. 
+							Below is a breakdown of my doctoral and postdoctoral research experiences.
+						</p>
+
+                        <div class="row">
+                            <div class="col-3 col-12-mobile">
+                                <article class="item">
+                                    <a href="#uavs" id = "uavs-link"><img src="images/uavs.png" height="280" width="280" alt="" /></a> 
+                                    <!-- <img src="images/uavs.png" height="280" style="width:90%" alt="" /> -->
+                                    <header>
+                                        <h3>Environmental Monitoring using Unmanned Systems</h3>
+                                    </header>
+                                </article>
+                            </div>
+                            <div class="col-3 col-12-mobile">
+                                <article class="item">
+									<a href="#fetch" id = "fetch-link"><img src="images/fetch.png" height="280" width="300" alt="" /></a> 
+                                    <header>
+                                        <h3>Planning under Uncertainties for Safety-critical Systems</h3>
+                                    </header>
+                                </article>
+                            </div>
+                            <div class="col-3 col-12-mobile">
+                                <article class="item">
+									<a href="#pedestrian" id = "pedestrian-link">
+										<img src="images/pedestrian.png" height="280" width="300" alt="" />
+									</a>
+                                  
+                                    <header>
+                                        <h3>Vision-based Perception Systems for Autonomous Cars</h3>
+                                    </header>
+                                </article>
+                            </div>
+
+                            <div class="col-3 col-12-mobile">
+                                <article class="item">
+									<a href="#multi-agent" id = "multi-agent-link">
+										<img src="images/multi-agent.png" height="280" width="300" alt="" />
+									</a>
+                                    <header>
+                                        <h3>Efficient Tasking and Coordination for Multi-Agent Systems</h3>
+                                    </header>
+                                </article>
+                            </div>
+                        </div>
+
+
+					</section>
+		
+					<!-- JAIST -->
+					<section id="uavs" class="three">
+						<div class="container">
+							 <h2>Environmental Monitoring using Unmanned Systems</h2>
+							 <p>My doctoral research was focused on developing unmanned autonomous robotic systems that can contribute greatly to search-and-rescue missions, 
+							 and can also be used for environmental monitoring purposes. 
+							 <img src="images/uavs.png" align = "right"  width="300" height="250"/>
+							 My doctoral dissertation was a study of <b>UAV-based Topographic Mapping and Source Localization of the Radiation Field</b>. 
+							 This dissertation seeks to address methodological shortcomings in the current empirical research on source localization of the radiation field.
+							 In the radiation field monitoring problem, measurements of the field are spatially distributed throughout the target area. 
+							 Given a target area, estimating the source positions is what is commonly known as a source localization problem. 
+							 One of the straightforward approaches is to find the location where the measurement is significantly higher than the others. 
+							 However, in the radiation field, if the cumulative radiating effect of sources exists, the field turns out to be complex to estimate, 
+							 and the sources are no longer at the center of each distribution. Accordingly, the hotspot, where the radiation intensity is maximum, 
+							 does not coincide with the positions of sources. From the robot's point of view, the measurement is one pixel and must gather at the expense of exploration. 
+							 When the environment is unknown, the robot needs to measure the field by exploring which location is interesting and which is not. 
+							 Robots operating under such conditions have to tackle the problem of deciding where to go to get the most relevant information.
+							 Therefore, we propose an efficient exploration method to quickly localize the radiation sources using the following procedures: 
+							 1) Region of Interest (ROI) determination utilizing topographic maps with specific radiation level selection methods and 
+							 2) source localization estimating the number of sources and their positions with Variational Bayes inference of Gaussian mixtures 
+							 For real-world implementation, we developed autonomous vision-based UAV navigation for a GPS-denied environment.</p>
+						</div>               
+					 </section>
+					 <!-- Rice University -->
+					 <section id="fetch" class="three">
+						 <div class="container">
+							 <h2>Planning under Uncertainties for Safety-critical Systems</h2>
+							 <p>In classical behavior planning algorithms assume that all the elements of an environment are known to compute the solution 
+							   before ever actually executing an action in the environment. Unfortunately, uncertainty is an unavoidable part of any autonomous system that precludes agents 
+							   from being able to plan a solution in advance.  
+							   <img src="images/fetch.png" align = "right"  width="300" height="250"/>
+							   To deal with uncertainties, part of my research activities aimed at leveraging 
+							   <b>interactive learning and data-driven prediction</b> to synthesize optimal policies with cost and energy constraints in 
+							   dynamic environments. Autonomous robots operating in uncertain domains often 
+							   face tasks with both Boolean qualitative requirements (such as reaching a goal location safely) and optimality criteria (such as reaching 
+							   the goal as fast as possible). These problems can be modeled as Partially Observable Markov Decision Processes (POMDPs) with quantitative 
+							   and qualitative objectives. 
+							   In this work, we study this problem for the special case
+							   of <i>safe-reachability</i> objectives, which require that with a
+							   probability above a threshold, a goal state is eventually reached
+							   while keeping the probability of visiting unsafe states below a
+							   different threshold. We present an online scalable policy synthesis framework for POMDPs with safe-reachability objectives.
+							   We also offer a theoretical analysis of this framework and evaluate our framework through real-robot experiments.      
+							 </p>
+						 </div>
+					 </section>
+		 
+					 <!-- Nagoya & NCat -->
+					 <section id="pedestrian" class="three">
+						 <div class="container">
+							 <h2>Vision-based Perception Systems for Autonomous Cars</h2>
+									 <p>
+									   The advent of autonomous driving technologies would lead to vehicles with different levels of autonomy equipped with 
+									   Advanced Driver Assistance Systems (ADAS), in which automatically identifying pedestrians will be a crucial safety requirement. 
+									   <img src="images/pedestrian.png" align = "right"  width="300" height="250"/>
+									   An important extension of my research is to develop an efficient and robust <b>deep learning-based perception system</b> that facilitates 
+									   the vision-based planning modules. In particular, my research focuses on real-time accurate 
+									   pedestrian detection and tracking to ensure safety and reliability in autonomous driving.
+									   Pedestrian detection is a notoriously hard problem and particularly challenging due to the fact that pedestrians may appear in various poses, 
+									   clothing, and articulations of body parts. Likewise, pedestrians can be found mostly in urban areas where the background texture form a highly cluttered environment.
+									   We investigate multi-modal sensor data, joint evaluation of inferences from anchor box and semantic segmentation networks, and body parts to detect and 
+									   track pedestrians accurately and robustly. 
+									   In addition to the pedestrian detection problem,  I also worked on modeling driving behavior using deep 
+									   learning algorithms when I was a Post-Doctoral Researcher at Nagoya University. My specific interest was in the Generative Adversarial Networks (GANs) 
+									   which is a semi-supervised machine learning algorithm. Specifically, I was focusing on developing the ability of self-driving or autonomous cars to detect 
+									   anomalous driving behavior with generative adversarial networks (GANs)
+						 </div>
+					 </section>
+		 
+					 <!-- NCat & JAIST -->
+					 <section id="multi-agent" class="three">
+						 <div class="container">
+							 <h2>Efficient Tasking and Coordination for Multi-Agent Systems</h2>
+							 <p>In many scenarios, it is important to deploy a team of mobile robots as a sensing platform to accomplish complex missions such as smart farming, environmental monitoring, 
+							 etc. <img src="images/multi-agent.png" align = "right"  width="300" height="250"/> 
+							 Monitoring, surveying, or search-and-rescuing using the multi-robot system, however, can be a technical challenge because this problem demands an efficient tasking 
+							 and coordination mechanism. My research activities in multi-agent systems focus on developing an <b>integrated task and coordination</b> mechanism to monitor an area of 
+							 interest while incorporating the physical and sensing constraints of heterogeneous robots as well as satisfying measurement quality requirements.
+							 My current research at NCAT primarily focuses on <b>Multi-agent System applications and enabling capabilities</b>. 
+							 In particular, we are interested in monitoring environmental phenomena, such as nuclear radiation, greenhouse gas emission, soil parameters in precision agriculture, 
+							 traffic incidents. These phenomena are generally referred to as spatiotemporal fields which have high variability in both time and space.  Unlike a single robot system,  
+							 a multi-robot system presents an efficient, faster solution to the problem of understanding unknown spatiotemporal fields.
+							 Besides surveillance and monitoring, we also investigate safety and reachability requirements in dynamic adversarial environments when little or no information about 
+							 the dynamics and intentions of the adversarial objects is available. </p>
+						 </div>
+					 </section>
+
+			
+
+		</section>
+				
+		
+	
+				<section>
+					<div class="container">
+						<footer>
+							<a href="publication.html" class="button scrolly">Publication List</a>
+						</footer>
+					</div>
+				</section>
+				
+
+		</div>
+
+	
+
+	
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

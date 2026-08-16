@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/static/css/main.dfd409f4.css",
+    "main.js": "/static/js/main.722c61b3.js",
+    "static/js/453.6157a465.chunk.js": "/static/js/453.6157a465.chunk.js",
+    "static/media/ugv_fleet.png": "/static/media/ugv_fleet.2fffb91267a86eedbf04.png",
+    "static/media/manipulator.png": "/static/media/manipulator.64ad0917823d5ca4791d.png",
+    "static/media/drone_fleet.png": "/static/media/drone_fleet.29dbcacae21317a0bb61.png",
+    "static/media/uav_hero.png": "/static/media/uav_hero.2cc088e88de47d95c2ae.png",
+    "static/media/localization.png": "/static/media/localization.522014c12895d1088f66.png",
+    "static/media/rigs.png": "/static/media/rigs.dfb8b9bbf19143a82ca6.png",
+    "static/media/maps.png": "/static/media/maps.69d88fc0b492222f8766.png",
+    "static/media/redwan-old.jpg": "/static/media/redwan-old.9dedf1e0331845a7091e.jpg",
+    "static/media/raba.png": "/static/media/raba.53efdcf478864366fc99.png",
+    "static/media/flying_robots.png": "/static/media/flying_robots.1b54e34aec342e59fc07.png",
+    "static/media/sourav.png": "/static/media/sourav.5bc172c433c091d0a9a4.png",
+    "static/media/asvs.png": "/static/media/asvs.08eb780cfb0357319127.png",
+    "static/media/rl.png": "/static/media/rl.a030cd8256b6bc820e34.png",
+    "static/media/simant.png": "/static/media/simant.c37d96870ce3067ab361.png",
+    "static/media/NSF_logo.svg": "/static/media/NSF_logo.bff70bdae3fce125aeb1.svg",
+    "static/media/nsf.svg": "/static/media/nsf.bff70bdae3fce125aeb1.svg",
+    "static/media/lbrn.png": "/static/media/lbrn.375ac8b3eed8f6cafc11.png",
+    "static/media/airlab-logo.png": "/static/media/airlab-logo.046f9c458bb079a42e6c.png",
+    "static/media/lsu-new-orleans-logo.png": "/static/media/lsu-new-orleans-logo.2dbd718270d5f3e66645.png",
+    "static/media/lbrn.jpg": "/static/media/lbrn.ee56f210f00bead7bc84.jpg",
+    "static/media/redwan.jpg": "/static/media/redwan.ada5f034e8f9398c0be8.jpg",
+    "static/media/profile.png": "/static/media/profile.6deef6126d40d69d610f.png",
+    "static/media/epa.svg": "/static/media/epa.1e9ffeed9508817f5a46.svg",
+    "index.html": "/index.html",
+    "static/media/vinnova.svg": "/static/media/vinnova.fd380876f793538fb817.svg",
+    "main.dfd409f4.css.map": "/static/css/main.dfd409f4.css.map",
+    "main.722c61b3.js.map": "/static/js/main.722c61b3.js.map",
+    "453.6157a465.chunk.js.map": "/static/js/453.6157a465.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dfd409f4.css",
+    "static/js/main.722c61b3.js"
+  ]
+}

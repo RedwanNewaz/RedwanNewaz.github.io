@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>AiR Lab</title>
+    <script type="text/javascript">
+      // ---------------------------------------------------------------------
+      // Single Page Apps for GitHub Pages
+      // https://github.com/rafgraph/spa-github-pages  (MIT)
+      //
+      // GitHub Pages serves static files only: it has no idea that
+      // /publication or /research/... are routes handled by React Router, so a
+      // direct visit or a browser refresh on those URLs returns this 404 page.
+      //
+      // This script rewrites the requested path into a query string and
+      // redirects to the site root. The matching snippet in index.html then
+      // restores the real URL before React Router boots, so the visitor lands
+      // on the page they asked for.
+      //
+      // pathSegmentsToKeep = 0  ->  site served from the domain root
+      //                             (https://redwannewaz.github.io/)
+      // pathSegmentsToKeep = 1  ->  site served from a project subpath
+      //                             (https://redwannewaz.github.io/airlab/)
+      // ---------------------------------------------------------------------
+      var pathSegmentsToKeep = 0;
+
+      var l = window.location;
+      l.replace(
+        l.protocol +
+          '//' +
+          l.hostname +
+          (l.port ? ':' + l.port : '') +
+          l.pathname
+            .split('/')
+            .slice(0, 1 + pathSegmentsToKeep)
+            .join('/') +
+          '/?/' +
+          l.pathname
+            .slice(1)
+            .split('/')
+            .slice(pathSegmentsToKeep)
+            .join('/')
+            .replace(/&/g, '~and~') +
+          (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+          l.hash
+      );
+    </script>
+  </head>
+  <body></body>
+</html>

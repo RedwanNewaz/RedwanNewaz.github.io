@@ -230,6 +230,6 @@ export const researchData = [
       "Physical AI",
       "Multimodal Sensor Fusion",
     ],
-    image: "maps.png",
+    image: "robotic-forensic.png",
   },
 ];

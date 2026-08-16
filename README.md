@@ -151,7 +151,7 @@ If a deep link ever 404s after a change, that pair is the first thing to check.
 
 ## 4. Serving from a different URL
 
-Two settings must agree with wherever the site is served from.
+Two settings must agree with wherever the site is served from. The deafult branch for this website is ```redwan```.
 
 | Where the site lives | `homepage` in `package.json` | `pathSegmentsToKeep` in `public/404.html` |
 | --- | --- | --- |

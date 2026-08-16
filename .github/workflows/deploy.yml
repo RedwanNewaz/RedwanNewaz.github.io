@@ -1,8 +1,14 @@
 name: Build and deploy to GitHub Pages
 
-# Builds the React app and publishes the contents of build/ to the gh-pages
-# branch. In the repository, set Settings -> Pages -> Source to
-# "Deploy from a branch" -> gh-pages / (root).
+# Builds the React app and publishes build/ directly to GitHub Pages.
+#
+# REQUIRED ONE-TIME SETTING:
+#   Repository -> Settings -> Pages -> Build and deployment -> Source
+#   must be set to "GitHub Actions".
+#
+# If Source is left on "Deploy from a branch" pointing at the source branch,
+# GitHub serves the repository files instead of the build, and visitors see
+# the README rendered as the home page.
 
 on:
   push:
@@ -13,16 +19,18 @@ on:
   workflow_dispatch: # lets you trigger a deploy by hand from the Actions tab
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
+# Never run two deploys at once; let a newer push supersede an in-flight one.
 concurrency:
-  group: pages-deploy
+  group: pages
   cancel-in-progress: true
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Check out the repository
         uses: actions/checkout@v4
@@ -39,12 +47,23 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          # Treat warnings as warnings, not build failures.
-          CI: false
+          CI: false # treat lint warnings as warnings, not build failures
 
-      - name: Publish to the gh-pages branch
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload the build output as a Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
-          publish_branch: gh-pages
+          path: ./build
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

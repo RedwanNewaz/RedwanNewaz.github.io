@@ -56,27 +56,49 @@ working branch; the compiled site lives on a separate `gh-pages` branch. You
 never commit the `build/` folder to the source branch — `.gitignore` excludes
 it.
 
+> **If the live site shows this README instead of the website, skip to
+> [the one setting that causes it](#the-most-common-mistake).**
+
 ### Option A — automatic deploys with GitHub Actions (recommended)
 
-A workflow is already committed at `.github/workflows/deploy.yml`. It installs
-dependencies, runs `npm run build`, and force-pushes the result to `gh-pages`
-on every push to `main`, `master`, or `redwan`.
+A workflow is already committed at `.github/workflows/deploy.yml`. On every
+push to `main`, `master`, or `redwan` it installs dependencies, runs
+`npm run build`, and uploads `build/` to GitHub Pages as a deployment artifact.
 
 One-time setup:
 
 1. Push this repository to GitHub, including the `.github/` folder.
 2. Go to **Settings → Pages**.
-3. Under **Build and deployment → Source**, choose **Deploy from a branch**.
-4. Set the branch to **`gh-pages`** and the folder to **`/ (root)`**, then
-   **Save**.
-5. Push a commit (or open the **Actions** tab and run
-   *Build and deploy to GitHub Pages* manually via **Run workflow**).
+3. Under **Build and deployment → Source**, choose **GitHub Actions**.
+   Not "Deploy from a branch" — see below for why.
+4. Push a commit, or open the **Actions** tab and run
+   *Build and deploy to GitHub Pages* via **Run workflow**.
 
-The first deploy takes a couple of minutes. After that, every push republishes
-the site. The Actions tab shows the build log if something fails.
+The first deploy takes a couple of minutes. After that, every push
+republishes. The Actions tab shows the log, and the run summary links to the
+deployed URL.
 
 If your default branch is not one of `main`, `master`, or `redwan`, add its
 name to the `branches:` list at the top of `.github/workflows/deploy.yml`.
+
+#### The most common mistake
+
+**Symptom:** you visit the live site and see this README rendered as a web
+page, often with the repository name as the heading — no navbar, no styling.
+
+**Cause:** **Settings → Pages → Source** is set to *Deploy from a branch*
+pointing at the branch that holds the source code. That branch has no
+`index.html` at its root, so GitHub falls back to rendering `README.md` with
+Jekyll. It is publishing the repository, not the website.
+
+**Fix:** set **Source** to **GitHub Actions** and re-run the workflow. Nothing
+in the code needs to change.
+
+The underlying point: the branch you *write* code on and the thing GitHub
+*serves* are different. `src/` is not a website — it only becomes one after
+`npm run build` turns it into `build/`. Pages has to be pointed at the build
+output, whether that arrives as an Actions artifact (Option A) or on a
+`gh-pages` branch (Option B).
 
 ### Option B — manual deploys from your machine
 
@@ -98,12 +120,13 @@ npm run deploy
 ```
 
 `predeploy` runs the build automatically, then `gh-pages` commits `build/` to
-the `gh-pages` branch and pushes it. Configure **Settings → Pages** exactly as
-in Option A.
+the `gh-pages` branch and pushes it.
 
-Use this when you want to publish without pushing your source changes, or to
-recover if Actions is unavailable. Note that a later Actions run will overwrite
-whatever you pushed by hand.
+This route needs **Settings → Pages → Source** set to *Deploy from a branch* →
+**`gh-pages`** → **`/ (root)`**. That is mutually exclusive with Option A, so
+pick one and stay with it. Mixing them is the usual reason a site reverts to an
+old version: a stale `gh-pages` branch left over from an earlier setup gets
+served instead of the current build.
 
 ### What gets deployed
 
@@ -111,6 +134,10 @@ whatever you pushed by hand.
 hashed JS/CSS bundles under `static/`, and everything from `public/`. That
 folder is the entire website — there is no server-side component, no database,
 and no build step on GitHub's side beyond what the workflow does.
+
+`public/.nojekyll` is copied through to `build/`. It tells GitHub Pages to
+serve the files as-is instead of running them through Jekyll, which would
+otherwise ignore any path beginning with an underscore.
 
 ---
 
@@ -151,7 +178,7 @@ If a deep link ever 404s after a change, that pair is the first thing to check.
 
 ## 4. Serving from a different URL
 
-Two settings must agree with wherever the site is served from. The deafult branch for this website is ```redwan```.
+Two settings must agree with wherever the site is served from.
 
 | Where the site lives | `homepage` in `package.json` | `pathSegmentsToKeep` in `public/404.html` |
 | --- | --- | --- |
@@ -251,6 +278,10 @@ section 3. Also confirm `404.html` actually landed in `build/` after a build.
 **The site loads as a blank white page.**
 Open the browser console. If the JS and CSS files 404, `homepage` in
 `package.json` does not match where the site is served from. See section 4.
+
+**The live site shows this README instead of the website.**
+**Settings → Pages → Source** is pointing at the source branch. See
+[The most common mistake](#the-most-common-mistake).
 
 **Changes are not showing up.**
 Check the Actions tab for a failed run. If the run succeeded, it is usually the
